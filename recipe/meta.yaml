@@ -1,5 +1,5 @@
 {% set name = "fdm" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fdm-{{ version }}.tar.gz
-  sha256: 37cc282a159013a68169bb633a7020a694dbe3da2f986b31944a68ff00ee2a77
+  sha256: 47876c8fe8aea4b374913594938cbcbd065a648d044fe8e287af7f320341ef39
 
 build:
   noarch: python
