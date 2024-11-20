@@ -20,7 +20,7 @@ requirements:
     - setuptools >=41.0
     - wheel >=0.33
     - numpy >=1.16
-    - cython >=0.29
+    - build >=0.10
     - pip
   run:
     - python >=3.6
