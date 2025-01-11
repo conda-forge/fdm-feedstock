@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fdm-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fdm-{{ version }}.tar.gz
   sha256: 47876c8fe8aea4b374913594938cbcbd065a648d044fe8e287af7f320341ef39
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - {{ PYTHON }} -m pip install --no-deps --ignore-installed --no-cache-dir -vvv .
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling >=1.10
     - hatch-vcs >=0.3
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy >=1.16
     - sympy
 
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/wesselb/fdm

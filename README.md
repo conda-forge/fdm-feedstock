@@ -9,6 +9,10 @@ Package license: MIT
 
 Summary: Compute derivatives with finite-difference methods
 
+Development: https://github.com/wesselb/fdm
+
+Documentation: https://wesselb.github.io/fdm
+
 Current build status
 ====================
 
